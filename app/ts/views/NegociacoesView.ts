@@ -1,6 +1,6 @@
 class NegociacoesView extends View<Negociacoes>{
     
-   
+   //meu cumentaru
     template(modelo: Negociacoes): string {
         return `
                 <table class="table table-hover table-bordered">
