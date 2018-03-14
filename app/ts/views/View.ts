@@ -1,9 +1,7 @@
-declare var $: any;
-
 abstract class View<T> { //define que a classe é do tipo generico
 
     //se ha algo que preciso ser implementado devo usar abstract
-    private _elemnto: any;
+    private _elemnto: JQuery;
 
     constructor(seletor: string) {
         this._elemnto = $(seletor);
