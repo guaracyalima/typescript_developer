@@ -1,6 +1,7 @@
-class View<T> { //define que a classe é do tipo generico
+abstract class View<T> { //define que a classe é do tipo generico
 
-    protected _elemnto: Element;
+    //se ha algo que preciso ser implementado devo usar abstract
+    private _elemnto: Element;
 
     constructor(seletor: string) {
         this._elemnto = document.querySelector(seletor);
@@ -10,7 +11,7 @@ class View<T> { //define que a classe é do tipo generico
         this._elemnto.innerHTML = this.template(modelo);
     }
 
-    template(model: T): string{
-        throw new Error('Tu deve implementar o metodo template')
-    }
+    //metodos abstratos são aquels que não possuem implementação
+    //quem erda é obrigado a implemntar o metodo
+    abstract template(model: T): string;
 }
